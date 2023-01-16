@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Med belhaj hmida</title>
+    <meta name="description" content="Best portfolio" />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="../css/contact.css" />
+    <link rel="icon" href="icons/ic.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <form action="#" method="post" class="form-contact">
+
+        <h4>CONTACTEZ MOI </h4>
+        <hr>
+        <div class="name-field">
+            <div>
+                <label for="name">Nom</label>
+                <input type="text" id="name" required>
+            </div>
+            <div>
+                <label for="Prenom">Prenom</label>
+                <input type="Prenom" id="Prenom" required>
+            </div>
+
+        </div>
+
+        <label for="mail">Adresse mail</label>
+        <input type="email" id="mail" required>
+
+        <label for="subject">Objet</label>
+        <input type="text" id="subject" required>
+
+        <label for="msg">Message</label>
+        <textarea id="msg"></textarea>
+
+        <input type="submit" id="submit" value="Envoyer">
+        <a href="../index.html"><input type="button" value="Sortir"></a>
+    </form>
+
+</body>
+<script src="https://smtpjs.com/v3/smtp.js">
+</script>
+
+
+<script>
+    //var btn = document.getElementById('btn')
+    var envoyer = document.getElementsByClassName('form-contact')[0]
+    var nom = document.getElementById('name')
+    var Prenom = document.getElementById('Prenom')
+    var email = document.getElementById('mail')
+    var subject = document.getElementById('subject')
+    var msg = document.getElementById('msg')
+     
+   
+    
+    envoyer.addEventListener('submit',  (e) =>{
+        e.preventDefault()
+        let bdy = `<b style="color:blue;">Nom de l'emetteur : </b> ${nom.value} &nbsp; <br> <b style="color:blue;">Prénom de l'emetteur : </b> ${Prenom.value} 
+        <br>
+        <b style="color:blue;">Email : </b>  ${email.value}
+        <br>
+        <b style="color:blue;"> Message : </b>   ${msg.value}
+        <br>
+        `
+        Email.send({
+            SecureToken: "1c1a3087-537d-4f28-b7d1-df974b70f5ce",
+            To: 'belhajhmidamohamed@gmail.com',
+            From:  'belhajhmidamohamed@gmail.com',
+            Subject: subject.value,
+            Body: bdy
+        }).then(
+            message => alert(message)
+        );
+    })
+
+
+</script>
+
+</html>

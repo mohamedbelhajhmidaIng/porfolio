@@ -1,0 +1,184 @@
+:root {
+  --primaryColor: #00ced1;
+  --SecondaryColor: #ff720e;
+  --LightColor: #000000 /*#ffffff*/;
+  --bgColor1: #e7e7e7c5 /* #171a1c*/;
+  --bgColor2: #ffffff /*#22282a*/;
+  --padding: 8%; /*=0.5rem*/
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 16px;
+  color: var(--LightColor);
+  background-color: var(--bgColor1);
+}
+
+h2 {
+  font-size: 2.2rem; /*35px 1rem=16px eli hatina fel html    */
+  letter-spacing: 0.12rem;
+  cursor: pointer;
+}
+
+
+span {
+  color: var(--SecondaryColor);
+}
+.btn {
+  background-color: #ff720e;;
+  color: var(--LightColor);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.81rem 1.87rem; /*top */
+  border-radius: 20px;
+  border: 2px solid transparent;
+  transition: 0.4s;
+  color: white;
+}
+
+.btn:hover {
+  background-color: transparent;
+  border: 2px solid var(--SecondaryColor);
+  color: #000000;
+}
+
+nav {
+  padding-top: 2.8rem;
+  padding-left: var(--padding);
+  padding-right: var(--padding);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav ul li {
+  list-style-type: none;
+  display: inline-block; /*kolhom fi star*/
+  margin: 1.1rem;
+}
+nav ul a {
+  color: var(--LightColor);
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.4s;
+}
+
+nav ul a:hover {
+  color: var(--SecondaryColor);
+}
+
+
+p {
+  letter-spacing: 1px;
+  line-height: 1.8rem;
+  font-size: 1rem;
+}
+h1 {
+  font-size: 4.65rem;
+  margin: 1.7rem 0;
+}
+
+h3 {
+ font-size: 1.3rem;
+ padding: 10px;
+ text-align: center;
+ 
+}
+
+h4 {
+  font-size: 1.25rem;
+  letter-spacing: 0.12rem;
+  color: var(--SecondaryColor);
+}
+h5 {
+  font-size: 1.37rem;
+  letter-spacing: 2px;
+  margin-bottom: 1.5rem;
+}
+
+.texte{
+ 
+  background-color: #ffffff;
+  padding:20px 20px 10px 20px;
+  margin:50px 10px 20px 150px ;
+  width: 80%;
+  height: 180px;
+  font-size: 1.1rem;
+  line-height: 20px;
+  border-radius: 6px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  /*flow-wrap:wrap;*/
+}
+
+.card{
+  background-color: white;
+  width: 350px;
+  height: 430px;
+  margin:20px 40px 40px 40px;
+  cursor: pointer;
+  box-shadow: 0 0 40px rgb(0, 0, 0,0.2);
+
+}
+.card-image{
+  background-color: aqua;
+  height: 170px;
+  margin-bottom: 15px;
+  background-size: cover;
+  box-shadow: 0 0 20px rgb(0, 0, 0,0.2);
+
+}
+
+.car-1{ 
+  background-image: url('../icons/bacmed.jpg');
+  box-shadow: 0 0 10px rgb(0, 0, 0,0.2);
+  margin: 5px;
+  padding: 30px;
+}
+.car-2{
+  background-image: url('../icons/licencemed.jpg');
+  box-shadow: 0 0 10px rgb(0, 0, 0,0.2);
+  margin: 5px;
+  padding: 30px;
+}
+.car-3{
+  background-image: url('../icons/download.jpg');
+  box-shadow: 0 0 10px rgb(0, 0, 0,0.2);
+  margin: 5px;
+  padding: 30px;
+}
+
+.card h2{
+  padding: 10px;
+}
+
+.card p{
+  padding: 10px;
+}
+
+.card  a {
+  text-decoration: none;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  display: block;
+  text-align: center;
+  margin: 20px 20px;
+  font-weight: bold;
+  border: 2px solid transparent;
+  transition: 0.4s;
+}
+
+.card a:hover{
+  background-color: transparent;
+  border: 2px solid #000000;
+  color: #000000;
+}
